@@ -2,6 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const xlsx = require("xlsx");
 require("dotenv").config();
+const contract = require("./borrow");
 const API_KEY = process.env.API_KEY;
 const REQ_URL = process.env.REQ_URL;
 
@@ -225,10 +226,16 @@ const getInternalTxByAddress = async (address) => {
 const getTotalInternalTxValue = async (address) => {
   const internalTx = await getInternalTxByAddress(address);
   let balance = 0;
+  let count = 0;
   internalTx.map((i) => {
     balance += parseInt(i.value);
+    count++;
   });
-  return balance * Math.pow(10, -18);
+  const result = {
+    balance: balance * Math.pow(10, -18),
+    count: count,
+  };
+  return result;
 };
 
 const getNormalTxByAddress = async (address) => {
@@ -291,7 +298,7 @@ const totalBalanceReceive = async (address) => {
 
 const main = async () => {
   // const addr = "0x2a14bcbB49d4a489Fe314aF57848F5F77A78bea2";
-  const addr = "0x07ebcc0400d154bd16A9cFfdE5aEa0b0Abfb5bd9";
+  const addr = "0xe9c57881747a62ebf5affbce5fff85842df07dbe";
   //internal Tx ETH 총합
   const totalInternalValue = await getTotalInternalTxValue(addr);
 
@@ -306,7 +313,7 @@ const main = async () => {
 
   // 입금 - 출금 (트랜잭션을 10000개만 조회하기에 -가될 수 있음)
   const totalInterestEarned = totalReceive.balance - totalWithdraw.balance;
-
+  const aTokenBalance = await contract.getBorrowBalance(addr);
   const result = {
     wallet_address: addr,
     balance: balance,
@@ -315,7 +322,22 @@ const main = async () => {
     total_receive: totalReceive.balance,
     receive_count: totalReceive.count,
     total_interest_earned: totalInterestEarned,
-    total_internal_value: totalInternalValue,
+    total_internal_value: totalInternalValue.balance,
+    internal_tx_count: totalInternalValue.count,
+    defiData: {
+      totalCollateralBase: aTokenBalance.totalDebtBase,
+      totalDebtBase: aTokenBalance.totalDebtBase,
+      availableBorrowsBase: aTokenBalance.availableBorrowsBase,
+      currentLiquidationThreshold: aTokenBalance.currentLiquidationThreshold,
+      ltv: aTokenBalance.ltv,
+      healthFactor:
+        (Number(
+          BigInt("0x" + aTokenBalance.healthFactor) /
+            BigInt("0x10000000000000000")
+        ) /
+          2 ** 64) *
+        100,
+    },
   };
   console.table({
     wallet_address: "이더리움 지갑 주소",

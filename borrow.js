@@ -49,20 +49,21 @@ async function getATokenBalance() {
 }
 
 // 대출 잔액 가져오기
-async function getBorrowBalance() {
+async function getBorrowBalance(address) {
   const lendingPoolContract = await getLendingPoolContract();
   const borrowBalance = await lendingPoolContract.methods
-    .getUserAccountData(accountAddress)
+    .getUserAccountData(address)
     .call();
   return borrowBalance;
 }
 
 // 예치금과 대출 잔액 출력
 async function printAccountBalances() {
-  const aTokenBalance = await getATokenBalance();
   const borrowBalance = await getBorrowBalance();
-  console.log(aTokenBalance);
-  console.log(borrowBalance);
+  return borrowBalance;
 }
 
-printAccountBalances();
+module.exports = {
+  printAccountBalances,
+  getBorrowBalance,
+};
