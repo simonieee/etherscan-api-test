@@ -1,10 +1,10 @@
 const Web3 = require("web3");
+require("dotenv").config();
 const { abi: lendingPoolAbi } = require("./lendingPoolABI.json");
 const { abi: aTokenAbi } = require("./USDCTokenABI.json");
 const { abi: poolAbi } = require("./poolABI.json");
 // 이더리움 RPC endpoint 주소 설정
-const rpcEndpoint =
-  "https://mainnet.infura.io/v3/f2bb28bf1ea84415b0fc2346d890d1c9";
+const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
 const web3 = new Web3(rpcEndpoint);
 
 // 계정 주소와 aToken 주소 설정
