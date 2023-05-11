@@ -321,7 +321,9 @@ const main = async () => {
     wallet_address: "이더리움 지갑 주소",
     balance: "보유하고 있는 ETH 개수",
     total_withdraw: "해당 계좌에서 송금한 총 ETH량",
+    withdraw_count: "해당 계좌에서 송금 트랜잭션 발생 수",
     total_receive: "해당 계좌로 입금된 총 ETH량",
+    receive_count: "해당 계좌로 입금 트랜잭션 발생 수",
     total_interest_earned: "예금 및 출금 금액(ETH 기준)의 차이",
     total_internal_value: "internal Tx ETH 총합",
   });
