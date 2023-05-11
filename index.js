@@ -1,4 +1,6 @@
 const axios = require("axios");
+const fs = require("fs");
+const xlsx = require("xlsx");
 require("dotenv").config();
 const API_KEY = process.env.API_KEY;
 const REQ_URL = process.env.REQ_URL;
@@ -256,67 +258,86 @@ const getNormalTxByAddress = async (address) => {
 const totalWithdrawBalance = async (address) => {
   const tx = await getNormalTxByAddress(address);
   let balance = 0;
+  let count = 0;
   tx.map((i) => {
-    i.from.toLowerCase() === address.toLowerCase() &&
-      (balance += parseInt(i.value));
+    if (i.from.toLowerCase() === address.toLowerCase()) {
+      balance += parseInt(i.value);
+      count++;
+    }
   });
-  return balance * Math.pow(10, -18);
+  const result = {
+    balance: balance * Math.pow(10, -18),
+    count: count,
+  };
+  return result;
 };
 
 const totalBalanceReceive = async (address) => {
   const tx = await getNormalTxByAddress(address);
   let balance = 0;
+  let count = 0;
   tx.map((i) => {
-    i.to.toLowerCase() === address.toLowerCase() &&
-      (balance += parseInt(i.value));
+    if (i.to.toLowerCase() === address.toLowerCase()) {
+      balance += parseInt(i.value);
+      count++;
+    }
   });
-  return balance * Math.pow(10, -18);
+  const result = {
+    balance: balance * Math.pow(10, -18),
+    count: count,
+  };
+  return result;
 };
 
 const main = async () => {
   // const addr = "0x2a14bcbB49d4a489Fe314aF57848F5F77A78bea2";
   const addr = "0x07ebcc0400d154bd16A9cFfdE5aEa0b0Abfb5bd9";
-  // internal Tx ETH 총합
-  // const totalInternalValue = await getTotalInternalTxValue(addr);
+  //internal Tx ETH 총합
+  const totalInternalValue = await getTotalInternalTxValue(addr);
 
-  // // 지갑 보유 ETH
-  // const balance = await getBalance(addr);
+  // 지갑 보유 ETH
+  const balance = await getBalance(addr);
 
-  // // 해당 계좌에서 송금한 총 ETH량
-  // const totalWithdraw = await totalWithdrawBalance(addr);
+  // 해당 계좌에서 송금한 총 ETH량
+  const totalWithdraw = await totalWithdrawBalance(addr);
 
-  // // 해당 계좌로 입금된 총 ETH량
-  // const totalReceive = await totalBalanceReceive(addr);
+  // 해당 계좌로 입금된 총 ETH량
+  const totalReceive = await totalBalanceReceive(addr);
 
-  // // 입금 - 출금 (트랜잭션을 10000개만 조회하기에 -가될 수 있음)
-  // const totalInterestEarned = totalReceive - totalWithdraw;
+  // 입금 - 출금 (트랜잭션을 10000개만 조회하기에 -가될 수 있음)
+  const totalInterestEarned = totalReceive.balance - totalWithdraw.balance;
 
-  // const result = {
-  //   wallet_address: addr,
-  //   balance: balance,
-  //   total_withdraw: totalWithdraw,
-  //   total_receive: totalReceive,
-  //   total_interest_earned: totalInterestEarned,
-  //   total_internal_value: totalInternalValue,
-  // };
-  // console.table({
-  //   wallet_address: "이더리움 지갑 주소",
-  //   balance: "보유하고 있는 ETH 개수",
-  //   total_withdraw: "해당 계좌에서 송금한 총 ETH량",
-  //   total_receive: "해당 계좌로 입금된 총 ETH량",
-  //   total_interest_earned: "예금 및 출금 금액(ETH 기준)의 차이",
-  //   total_internal_value: "internal Tx ETH 총합",
+  const result = {
+    wallet_address: addr,
+    balance: balance,
+    total_withdraw: totalWithdraw.balance,
+    withdraw_count: totalWithdraw.count,
+    total_receive: totalReceive.balance,
+    receive_count: totalReceive.count,
+    total_interest_earned: totalInterestEarned,
+    total_internal_value: totalInternalValue,
+  };
+  console.table({
+    wallet_address: "이더리움 지갑 주소",
+    balance: "보유하고 있는 ETH 개수",
+    total_withdraw: "해당 계좌에서 송금한 총 ETH량",
+    total_receive: "해당 계좌로 입금된 총 ETH량",
+    total_interest_earned: "예금 및 출금 금액(ETH 기준)의 차이",
+    total_internal_value: "internal Tx ETH 총합",
+  });
+  console.log(result);
+
+  // const test = await getNormalTxByAddress(
+  //   "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+  // );
+  // console.log(test);
+  // const t = [];
+  // test.map((i) => t.push(i.from));
+
+  // const accounts = t.filter((i, idx) => {
+  //   return t.indexOf(i) === idx;
   // });
-  // console.log(result);
-
-  const test = await getNormalTxByAddress(
-    "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
-  );
-  console.log(test);
-  const t = [];
-  test.map((i) => t.push(i.from));
-
-  console.log(t);
+  // console.log(accounts);
 
   // const token = await getTotalTokenBalance(addr);
   // const tokenTransfer = await getERC20TokenTransferEvent(
