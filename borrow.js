@@ -43,7 +43,7 @@ async function getLendingPoolContract() {
 // aToken 잔액 및 이름 가져오기
 async function getATokenBalance(abi, address, ca) {
   const aTokenContract = new web3.eth.Contract(abi, ca);
-  const tokenName = await aTokenContract.methods.name().call();
+  const tokenName = await aTokenContract.methods.symbol().call();
   const aTokenBalance = await aTokenContract.methods.balanceOf(address).call();
   console.log(aTokenBalance);
   console.log(tokenName);
@@ -78,8 +78,8 @@ async function printAccountBalances() {
   return borrowBalance;
 }
 
-getTokenList();
-getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
+// getTokenList();
+// getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {
   printAccountBalances,
   getBorrowBalance,
