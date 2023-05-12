@@ -5,7 +5,7 @@ require("dotenv").config();
 const contract = require("./borrow");
 const API_KEY = process.env.API_KEY;
 const REQ_URL = process.env.REQ_URL;
-
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const tokenContractList = [
   {
     name: "BNB",
@@ -296,60 +296,139 @@ const totalBalanceReceive = async (address) => {
   return result;
 };
 
+/**
+ * 해당 토큰 컨트랙트 주소로 ABI 얻어오기
+ * @param {*} ca
+ * @returns
+ */
+const getTokenABI = async (ca) => {
+  try {
+    const params = {
+      module: "contract",
+      action: "getabi",
+      address: ca,
+      apikey: API_KEY,
+    };
+    const res = await axios({
+      method: "get",
+      url: REQ_URL,
+      params: params,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;",
+      },
+      responseType: "json",
+    });
+    return res.data.result;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// 토큰 컨트랙트 반복문 돌려서 해당 토큰들의 개수 수집
+const getTotalTokenBalanceByAddress = async (address) => {
+  try {
+    const tokenList = await contract.getTokenList();
+    let tokenAbiList = [];
+    let tokenInfoList = [];
+    for (const addr of tokenList) {
+      const tokenABI = await getTokenABI(addr);
+      tokenAbiList.push(JSON.parse(tokenABI));
+      await delay(200);
+    }
+
+    await Promise.all(tokenAbiList);
+
+    for (const [index, abi] of tokenAbiList.entries()) {
+      console.log(index, abi);
+      const tokenInfo = await contract.getATokenBalance(
+        abi,
+        address,
+        tokenList[index]
+      );
+      tokenInfoList.push(tokenInfo);
+    }
+    console.log(tokenInfoList);
+    // const tokenBalanceList = {};
+
+    // const tokenBalance = await contract.getATokenBalance(
+    //   tokenABI,
+    //   address,
+    //   ca
+    // );
+    // result = {
+    //   ...tokenBalanceList,
+
+    // }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const main = async () => {
   // const addr = "0x2a14bcbB49d4a489Fe314aF57848F5F77A78bea2";
-  const addr = "0xe9c57881747a62ebf5affbce5fff85842df07dbe";
+  const addr = "0x9b54264D7502f80163EA949038aAd771EAe67E38";
+  await getTotalTokenBalanceByAddress(addr);
   //internal Tx ETH 총합
-  const totalInternalValue = await getTotalInternalTxValue(addr);
+  // const totalInternalValue = await getTotalInternalTxValue(addr);
 
-  // 지갑 보유 ETH
-  const balance = await getBalance(addr);
+  // // 지갑 보유 ETH
+  // const balance = await getBalance(addr);
 
-  // 해당 계좌에서 송금한 총 ETH량
-  const totalWithdraw = await totalWithdrawBalance(addr);
+  // // 해당 계좌에서 송금한 총 ETH량
+  // const totalWithdraw = await totalWithdrawBalance(addr);
 
-  // 해당 계좌로 입금된 총 ETH량
-  const totalReceive = await totalBalanceReceive(addr);
+  // // 해당 계좌로 입금된 총 ETH량
+  // const totalReceive = await totalBalanceReceive(addr);
 
-  // 입금 - 출금 (트랜잭션을 10000개만 조회하기에 -가될 수 있음)
-  const totalInterestEarned = totalReceive.balance - totalWithdraw.balance;
-  const aTokenBalance = await contract.getBorrowBalance(addr);
-  const result = {
-    wallet_address: addr,
-    balance: balance,
-    total_withdraw: totalWithdraw.balance,
-    withdraw_count: totalWithdraw.count,
-    total_receive: totalReceive.balance,
-    receive_count: totalReceive.count,
-    total_interest_earned: totalInterestEarned,
-    total_internal_value: totalInternalValue.balance,
-    internal_tx_count: totalInternalValue.count,
-    defiData: {
-      totalCollateralBase: aTokenBalance.totalDebtBase,
-      totalDebtBase: aTokenBalance.totalDebtBase,
-      availableBorrowsBase: aTokenBalance.availableBorrowsBase,
-      currentLiquidationThreshold: aTokenBalance.currentLiquidationThreshold,
-      ltv: aTokenBalance.ltv,
-      healthFactor:
-        (Number(
-          BigInt("0x" + aTokenBalance.healthFactor) /
-            BigInt("0x10000000000000000")
-        ) /
-          2 ** 64) *
-        100,
-    },
-  };
-  console.table({
-    wallet_address: "이더리움 지갑 주소",
-    balance: "보유하고 있는 ETH 개수",
-    total_withdraw: "해당 계좌에서 송금한 총 ETH량",
-    withdraw_count: "해당 계좌에서 송금 트랜잭션 발생 수",
-    total_receive: "해당 계좌로 입금된 총 ETH량",
-    receive_count: "해당 계좌로 입금 트랜잭션 발생 수",
-    total_interest_earned: "예금 및 출금 금액(ETH 기준)의 차이",
-    total_internal_value: "internal Tx ETH 총합",
-  });
-  console.log(result);
+  // // 입금 - 출금 (트랜잭션을 10000개만 조회하기에 -가될 수 있음)
+  // const totalInterestEarned = totalReceive.balance - totalWithdraw.balance;
+  // const aTokenBalance = await contract.getBorrowBalance(addr);
+  // const result = {
+  //   wallet_address: addr,
+  //   balance: balance,
+  //   total_withdraw: totalWithdraw.balance,
+  //   withdraw_count: totalWithdraw.count,
+  //   total_receive: totalReceive.balance,
+  //   receive_count: totalReceive.count,
+  //   total_interest_earned: totalInterestEarned,
+  //   total_internal_value: totalInternalValue.balance,
+  //   internal_tx_count: totalInternalValue.count,
+  //   defiData: {
+  //     totalCollateralBase:
+  //       parseInt(aTokenBalance.totalDebtBase) * Math.pow(10, -18),
+  //     totalDebtBase: parseInt(aTokenBalance.totalDebtBase) * Math.pow(10, -18),
+  //     availableBorrowsBase:
+  //       parseInt(aTokenBalance.availableBorrowsBase) * Math.pow(10, -18),
+  //     currentLiquidationThreshold: aTokenBalance.currentLiquidationThreshold,
+  //     ltv: aTokenBalance.ltv,
+  //     healthFactor:
+  //       (Number(
+  //         BigInt("0x" + aTokenBalance.healthFactor) /
+  //           BigInt("0x10000000000000000")
+  //       ) /
+  //         2 ** 64) *
+  //       100,
+  //   },
+  // };
+  // console.table({
+  //   wallet_address: "이더리움 지갑 주소",
+  //   balance: "보유하고 있는 ETH 개수",
+  //   total_withdraw: "해당 계좌에서 송금한 총 ETH량",
+  //   withdraw_count: "해당 계좌에서 송금 트랜잭션 발생 수",
+  //   total_receive: "해당 계좌로 입금된 총 ETH량",
+  //   receive_count: "해당 계좌로 입금 트랜잭션 발생 수",
+  //   total_interest_earned: "예금 및 출금 금액(ETH 기준)의 차이",
+  //   total_internal_value: "internal Tx ETH 총합",
+  //   totalCollateralBase:
+  //     "유저가 대출을 받을 때 담보로 제공한 자산의 총 가치(총 담보 금액)",
+  //   totalDebtBase: "유저가 대출을 받았을 때 상환해야 할 총 금액(총 대출액)",
+  //   availableBorrowsBase: "유저가 현재 대출 가능한 최대 금액(대출 가능 금액)",
+  //   currentLiquidationThreshold:
+  //     "일정 수준의 대출 안전성을 보장하기 위해 설정되는 임계치(threshold)",
+  //   ltv: " 대출 상환액 대비 담보 가치 비율",
+  //   healthFactor: "대출 상환 능력(1미만은 청산위험)",
+  // });
+  // console.log(result);
 
   // const test = await getNormalTxByAddress(
   //   "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"

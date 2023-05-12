@@ -12,7 +12,7 @@ const accountAddress = "0x03Be75d5167E50c65BeF13A0d8e5D6Ca26d0f8c7";
 const aTokenAddress = "0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c";
 
 // aToken 컨트랙트 인스턴스 생성
-const aTokenContract = new web3.eth.Contract(aTokenAbi, aTokenAddress);
+
 // LendingPoolAddressesProvider 컨트랙트 주소 설정
 const lendingPoolAddressProviderAddress =
   "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e";
@@ -40,14 +40,20 @@ async function getLendingPoolContract() {
   return lendingPoolContract;
 }
 
-// aToken 잔액 가져오기
-async function getATokenBalance() {
-  const aTokenBalance = await aTokenContract.methods
-    .balanceOf(accountAddress)
-    .call();
-  return aTokenBalance;
-}
+// aToken 잔액 및 이름 가져오기
+async function getATokenBalance(abi, address, ca) {
+  const aTokenContract = new web3.eth.Contract(abi, ca);
+  const tokenName = await aTokenContract.methods.name().call();
+  const aTokenBalance = await aTokenContract.methods.balanceOf(address).call();
+  console.log(aTokenBalance);
+  console.log(tokenName);
+  const tokenInfo = {
+    name: tokenName,
+    balance: aTokenBalance,
+  };
 
+  return tokenInfo;
+}
 // 대출 잔액 가져오기
 async function getBorrowBalance(address) {
   const lendingPoolContract = await getLendingPoolContract();
@@ -57,13 +63,26 @@ async function getBorrowBalance(address) {
   return borrowBalance;
 }
 
+async function getTokenList() {
+  const lendingPoolContract = await getLendingPoolContract();
+  const reservesList = await lendingPoolContract.methods
+    .getReservesList()
+    .call();
+  console.log(reservesList);
+  return reservesList;
+}
+
 // 예치금과 대출 잔액 출력
 async function printAccountBalances() {
   const borrowBalance = await getBorrowBalance();
   return borrowBalance;
 }
 
+getTokenList();
+getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {
   printAccountBalances,
   getBorrowBalance,
+  getTokenList,
+  getATokenBalance,
 };
