@@ -1,0 +1,54 @@
+const { Alchemy, Network } = require("alchemy-sdk");
+
+const config = {
+  apiKey: "5Lv4PMJJZpnki_-TWaWurO-pX0PsvQqg",
+  network: Network.ETH_MAINNET,
+};
+const alchemy = new Alchemy(config);
+
+const main = async () => {
+  // Wallet address
+  // Address we want get NFT mints from
+  const fromAddress = "0x5c43B1eD97e52d009611D89b74fA829FE4ac56b1";
+
+  const res = await alchemy.core.getAssetTransfers({
+    fromBlock: "0x0",
+    fromAddress: fromAddress,
+    excludeZeroValue: true,
+    category: ["erc721", "erc1155"],
+  });
+
+  // Print contract address and tokenId for each NFT (ERC721 or ERC1155):
+  for (const events of res.transfers) {
+    console.log(events);
+    if (events.erc1155Metadata == null) {
+      console.log(
+        "ERC-721 Token Minted: ID- ",
+        events.tokenId,
+        " Contract- ",
+        events.rawContract.address
+      );
+    } else {
+      for (const erc1155 of events.erc1155Metadata) {
+        console.log(
+          "ERC-1155 Token Minted: ID- ",
+          erc1155.tokenId,
+          " Contract- ",
+          events.rawContract.address
+        );
+      }
+    }
+  }
+};
+
+const runMain = async () => {
+  try {
+    await main();
+    process.exit(0);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
+
+runMain();

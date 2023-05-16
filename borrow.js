@@ -45,8 +45,6 @@ async function getATokenBalance(abi, address, ca) {
   const aTokenContract = new web3.eth.Contract(abi, ca);
   const tokenName = await aTokenContract.methods.symbol().call();
   const aTokenBalance = await aTokenContract.methods.balanceOf(address).call();
-  console.log(aTokenBalance);
-  console.log(tokenName);
   const tokenInfo = {
     name: tokenName,
     balance: aTokenBalance,
@@ -78,6 +76,15 @@ async function printAccountBalances() {
   return borrowBalance;
 }
 
+async function getUserReservesData(abi, ca, provider, addr) {
+  const uiPoolDataContract = new web3.eth.Contract(abi, ca);
+  const userReservesData = await uiPoolDataContract.methods
+    .getUserReservesData(provider, addr)
+    .call();
+  console.log(userReservesData);
+  return userReservesData;
+}
+
 // getTokenList();
 // getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {
@@ -85,4 +92,5 @@ module.exports = {
   getBorrowBalance,
   getTokenList,
   getATokenBalance,
+  getUserReservesData,
 };
