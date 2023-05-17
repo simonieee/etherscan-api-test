@@ -1,17 +1,11 @@
 const Web3 = require("web3");
 require("dotenv").config();
-const { abi: lendingPoolAbi } = require("./lendingPoolABI.json");
-const { abi: aTokenAbi } = require("./USDCTokenABI.json");
-const { abi: poolAbi } = require("./poolABI.json");
+const { abi: lendingPoolAbi } = require("./Abi/lendingPoolABI.json");
+const { abi: aTokenAbi } = require("./Abi/USDCTokenABI.json");
+const { abi: poolAbi } = require("./Abi/poolABI.json");
 // 이더리움 RPC endpoint 주소 설정
 const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
 const web3 = new Web3(rpcEndpoint);
-
-// 계정 주소와 aToken 주소 설정
-const accountAddress = "0x03Be75d5167E50c65BeF13A0d8e5D6Ca26d0f8c7";
-const aTokenAddress = "0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c";
-
-// aToken 컨트랙트 인스턴스 생성
 
 // LendingPoolAddressesProvider 컨트랙트 주소 설정
 const lendingPoolAddressProviderAddress =
@@ -70,12 +64,6 @@ async function getTokenList() {
   return reservesList;
 }
 
-// 예치금과 대출 잔액 출력
-async function printAccountBalances() {
-  const borrowBalance = await getBorrowBalance();
-  return borrowBalance;
-}
-
 async function getUserReservesData(abi, ca, provider, addr) {
   const uiPoolDataContract = new web3.eth.Contract(abi, ca);
   const userReservesData = await uiPoolDataContract.methods
@@ -85,6 +73,7 @@ async function getUserReservesData(abi, ca, provider, addr) {
   return userReservesData;
 }
 
+printAccountBalances();
 // getTokenList();
 // getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {

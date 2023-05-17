@@ -1,237 +1,12 @@
-const axios = require("axios");
-const fs = require("fs");
-const xlsx = require("xlsx");
 const Web3 = require("web3");
 const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
 const web3 = new Web3(rpcEndpoint);
 
 require("dotenv").config();
-const contract = require("./borrow");
-const API_KEY = process.env.API_KEY;
-const REQ_URL = process.env.REQ_URL;
+const contract = require("./Api/contractApi");
+const etherscanApi = require("./Api/etherscanApi");
+
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const tokenContractList = [
-  {
-    name: "BNB",
-    addr: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
-    decimals: 18,
-  },
-  {
-    name: "USDT",
-    addr: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-    decimals: 6,
-  },
-  {
-    name: "USDC",
-    addr: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-    decimals: 6,
-  },
-  {
-    name: "stETH",
-    addr: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-    decimals: 18,
-  },
-  {
-    name: "UNI",
-    addr: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-    decimals: 18,
-  },
-];
-// BNB: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
-// USDT: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-// USDC: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-// stETH: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-// HEX: "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
-// MATIC: "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
-// UNI: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
-
-const getTokenBalance = async (address, ca) => {
-  try {
-    const params = {
-      module: "account",
-      action: "tokenbalance",
-      address: address,
-      contractaddress: ca,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      timeout: 5000,
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const getTotalTokenBalance = async (addr) => {
-  try {
-    const tokenList = [];
-    for await (const param of tokenContractList) {
-      const bc = await getTokenBalance(addr, param.addr);
-      tokenList.push({
-        name: param.name,
-        balance: bc,
-        decimals: param.decimals,
-      });
-    }
-    return tokenList;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const getBalance = async (address) => {
-  try {
-    const params = {
-      module: "account",
-      action: "balance",
-      address: address,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      responseType: "json",
-    });
-    const balance = parseInt(res.data.result) * Math.pow(10, -18);
-    return balance;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/**
- * 특정 ERC-20 Token의 전송기록 조회
- * @param {String} address
- * @param {String} ca
- * @returns
- */
-const getERC20TokenTransferEvent = async (address, ca) => {
-  try {
-    const params = {
-      module: "account",
-      action: "tokentx",
-      contractaddress: ca,
-      address: address,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const getERC721TokenTransferEvent = async (address, ca) => {
-  try {
-    const params = {
-      module: "account",
-      action: "tokennfttx",
-      contractaddress: ca,
-      address: address,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      timeout: 5000,
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/**
- * 특정 계정에서 발생한 특정 토큰에 대한 이벤트 트랜잭션 조회
- * @param {*} address
- * @param {*} ca
- * @returns
- */
-const getERC1155TokenTransferEvent = async (address, ca) => {
-  try {
-    const params = {
-      module: "account",
-      action: "token1155tx",
-      contractaddress: ca,
-      address: address,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      timeout: 5000,
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/**
- * 특정 계정에서 발생한 Internal Tx 조회
- * @param {*} address
- * @returns
- */
-const getInternalTxByAddress = async (address) => {
-  try {
-    const params = {
-      module: "account",
-      action: "txlistinternal",
-      address: address,
-      tag: "latest",
-      sort: "asc",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      timeout: 5000,
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
 
 /**
  * Internal Tx ETH 총합
@@ -239,7 +14,7 @@ const getInternalTxByAddress = async (address) => {
  * @returns
  */
 const getTotalInternalTxValue = async (address) => {
-  const internalTx = await getInternalTxByAddress(address);
+  const internalTx = await etherscanApi.getInternalTxByAddress(address);
   let balance = 0;
   let count = 0;
   internalTx.map((i) => {
@@ -254,41 +29,12 @@ const getTotalInternalTxValue = async (address) => {
 };
 
 /**
- * 특정 계정에서 발생한 트랜잭션 목록 조회
- * @param {*} address
- * @returns
- */
-const getNormalTxByAddress = async (address) => {
-  try {
-    const params = {
-      module: "account",
-      action: "txlist",
-      address: address,
-      tag: "latest",
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/**
  * 특정 계정에서 발생한 총 입금액
  * @param {*} address
  * @returns
  */
 const totalWithdrawBalance = async (address) => {
-  const tx = await getNormalTxByAddress(address);
+  const tx = await etherscanApi.getNormalTxByAddress(address);
   let balance = 0;
   let count = 0;
   tx.map((i) => {
@@ -310,7 +56,7 @@ const totalWithdrawBalance = async (address) => {
  * @returns
  */
 const totalBalanceReceive = async (address) => {
-  const tx = await getNormalTxByAddress(address);
+  const tx = await etherscanApi.getNormalTxByAddress(address);
   let balance = 0;
   let count = 0;
   tx.map((i) => {
@@ -327,34 +73,6 @@ const totalBalanceReceive = async (address) => {
 };
 
 /**
- * 해당 토큰 컨트랙트 주소로 ABI 얻어오기
- * @param {*} ca
- * @returns
- */
-const getTokenABI = async (ca) => {
-  try {
-    const params = {
-      module: "contract",
-      action: "getabi",
-      address: ca,
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      responseType: "json",
-    });
-    return res.data.result;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/**
  * 특정 계정이 가지고 있는 Aave Pool에서 지원하는 토큰의 개수
  * @param {*} address
  * @returns
@@ -367,28 +85,28 @@ const getTotalTokenBalanceByAddress = async (address) => {
     for (let addr of tokenList) {
       switch (addr) {
         case "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
-          const tokenABI = await getTokenABI(
+          const tokenABI = await etherscanApi.getTokenABI(
             "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
           );
           tokenAbiList.push(JSON.parse(tokenABI));
           break;
         }
         case "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704": {
-          const tokenABI = await getTokenABI(
+          const tokenABI = await etherscanApi.getTokenABI(
             "0x31724ca0c982a31fbb5c57f4217ab585271fc9a5"
           );
           tokenAbiList.push(JSON.parse(tokenABI));
           break;
         }
         case "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9": {
-          const tokenABI = await getTokenABI(
+          const tokenABI = await etherscanApi.getTokenABI(
             "0x96f68837877fd0414b55050c9e794aecdbcfca59"
           );
           tokenAbiList.push(JSON.parse(tokenABI));
           break;
         }
         default: {
-          const tokenABI = await getTokenABI(addr);
+          const tokenABI = await etherscanApi.getTokenABI(addr);
           tokenAbiList.push(JSON.parse(tokenABI));
         }
       }
@@ -418,44 +136,9 @@ const getTotalTokenBalanceByAddress = async (address) => {
   }
 };
 
-/**
- * 특정 계정의 Defi 관련 Tx 추출, asc는 오름,내림차순 정렬 가능
- * @param {*} address
- * @param {*} asc
- * @returns
- */
-const getDefiTxs = async (address, asc) => {
-  try {
-    const params = {
-      module: "account",
-      action: "txlist",
-      address: address,
-      startblock: 0,
-      endblock: 99999999,
-      tag: "latest",
-      sort: asc,
-      apikey: API_KEY,
-    };
-    const res = await axios({
-      method: "get",
-      url: REQ_URL,
-      params: params,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;",
-      },
-      responseType: "json",
-    });
-    const tx = res.data.result;
-    const defiTx = tx.filter((item) => item.input !== "0x");
-    return defiTx;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const getUserReservesData = async (ca, provider, addr) => {
-  const abi = await getTokenABI(ca);
-  // await Promise.all(abi);
+  const abi = await etherscanApi.getTokenABI(ca);
+
   const userReservesData = await contract.getUserReservesData(
     JSON.parse(abi),
     ca,
@@ -477,7 +160,7 @@ const getData = async (addr) => {
     const totalInternalValue = await getTotalInternalTxValue(addr);
 
     // 지갑 보유 ETH
-    const balance = await getBalance(addr);
+    const balance = await etherscanApi.getBalance(addr);
 
     // 해당 계좌에서 송금한 총 ETH량
     const totalWithdraw = await totalWithdrawBalance(addr);
@@ -551,7 +234,7 @@ const getData = async (addr) => {
  * @returns
  */
 const getActivityTime = async (addr) => {
-  const firstDefiTx = await getDefiTxs(addr, "asc");
+  const firstDefiTx = await etherscanApi.getDefiTxs(addr, "asc");
   const currentTimestamp = Math.floor(Date.now() / 1000);
 
   const timeDifference =
