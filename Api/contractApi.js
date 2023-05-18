@@ -33,6 +33,11 @@ async function getLendingPoolContract() {
   return lendingPoolContract;
 }
 
+function sliceAddr(hex) {
+  const addr = hex.startsWith("0x") ? hex.slice(2) : hex;
+  return addr;
+}
+
 const Api = {
   /**
    * 특정 계정에서 특정 토큰에 대한 잔액 가져오기
@@ -91,8 +96,28 @@ const Api = {
     const userReservesData = await uiPoolDataContract.methods
       .getUserReservesData(provider, addr)
       .call();
-    console.log(userReservesData);
     return userReservesData;
+  },
+  getLoanTransactions: async (addr) => {
+    try {
+      const filter = {
+        fromBlock: 0, // 블록 번호를 설정하여 필요한 범위 내에서만 조회 가능
+        toBlock: "latest", // 최신 블록까지 조회
+        address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", // 실제 대출 컨트랙트 주소로 대체해야 함
+        topics: [
+          "0xb3d084820fb1a9decffb176436bd02558d15fac9b0ddfed8c465bc7359d7dce0",
+          null,
+          `0x000000000000000000000000${sliceAddr(addr)}`,
+        ],
+      };
+
+      // 대출 이벤트 로그를 조회하여 거래 수 계산
+      const logs = await web3.eth.getPastLogs(filter);
+      return logs.length;
+    } catch (e) {
+      console.log(e);
+      return false;
+    }
   },
 };
 

@@ -204,6 +204,7 @@ const Api = {
         action: "txlist",
         address: address,
         tag: "latest",
+        sort: "asc",
         apikey: API_KEY,
       };
       const res = await axios({
