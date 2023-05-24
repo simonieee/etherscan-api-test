@@ -77,7 +77,6 @@ printAccountBalances();
 // getTokenList();
 // getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {
-  printAccountBalances,
   getBorrowBalance,
   getTokenList,
   getATokenBalance,

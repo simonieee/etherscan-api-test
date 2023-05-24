@@ -32,7 +32,11 @@ async function getLendingPoolContract() {
   );
   return lendingPoolContract;
 }
-
+/**
+ * 계정 주소 0x 제거
+ * @param {*} hex
+ * @returns
+ */
 function sliceAddr(hex) {
   const addr = hex.startsWith("0x") ? hex.slice(2) : hex;
   return addr;
@@ -98,12 +102,17 @@ const Api = {
       .call();
     return userReservesData;
   },
+  /**
+   * 특정 계정 주소에서 발생한 대출 횟수 카운팅
+   * @param {*} addr
+   * @returns
+   */
   getLoanTransactions: async (addr) => {
     try {
       const filter = {
-        fromBlock: 0, // 블록 번호를 설정하여 필요한 범위 내에서만 조회 가능
-        toBlock: "latest", // 최신 블록까지 조회
-        address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", // 실제 대출 컨트랙트 주소로 대체해야 함
+        fromBlock: 0,
+        toBlock: "latest",
+        address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", // Aave Pool V3 Address
         topics: [
           "0xb3d084820fb1a9decffb176436bd02558d15fac9b0ddfed8c465bc7359d7dce0",
           null,

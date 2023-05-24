@@ -1,17 +1,11 @@
-const Web3 = require("web3");
-const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
-const web3 = new Web3(rpcEndpoint);
+// const Web3 = require("web3");
+// const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
+// const web3 = new Web3(rpcEndpoint);
 
 require("dotenv").config();
 const contract = require("./Api/contractApi");
 const etherscanApi = require("./Api/etherscanApi");
 const customApi = require("./Api/customApi");
-
-const unitChange = (string) => {
-  // const bigNum = new BigNumber(string);
-  const result = web3.utils.fromWei(string, "ether");
-  return result;
-};
 
 /**
  * 특정 계정의 온체인 + 오프체인 활동 데이터
@@ -106,18 +100,18 @@ const getData = async (addr, ca, provider) => {
       scaled_variable_debt: "해당 유저의 가변 이자율 대출 잔고 총액(USDT)",
     });
     console.log(result);
+    return result;
   } catch (error) {
     console.error(error);
   }
 };
 
 const main = async () => {
-  const addr = "0xC676C2EE8932d8D84692161669891DaF39c98d45";
+  const addr = "0xca0AAf0E071f31D86812d83716e10eA5D5cfD425";
   const ca = "0x91c0eA31b49B69Ea18607702c5d9aC360bf3dE7d";
   const provider = "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e";
-  const aTokenBalance = await contract.getBorrowBalance(addr);
 
   getData(addr, ca, provider);
 };
 
-main();
+module.exports = { getData };
