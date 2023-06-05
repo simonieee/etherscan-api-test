@@ -1,7 +1,7 @@
 // const Web3 = require("web3");
 // const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
 // const web3 = new Web3(rpcEndpoint);
-
+const _ = require("lodash");
 require("dotenv").config();
 const contract = require("./Api/contractApi");
 const etherscanApi = require("./Api/etherscanApi");
@@ -31,6 +31,7 @@ const getData = async (addr, ca, provider) => {
     const aTokenBalance = await contract.getBorrowBalance(addr);
     const activityTime = await customApi.getActivityTime(addr);
     const borrow_count = await contract.getLoanTransactions(addr);
+    const repay_count = await contract.getRepayTransactions(addr);
     const onchainActivityTime = await customApi.getOnchainActivityTime(addr);
     const reservesData = await customApi.getReservesScaleData(
       ca,
@@ -56,9 +57,10 @@ const getData = async (addr, ca, provider) => {
         total_debt_base: aTokenBalance.totalDebtBase * Math.pow(10, -8),
         available_borrows_base:
           aTokenBalance.availableBorrowsBase * Math.pow(10, -6),
-        current_liquidation_threshold:
-          aTokenBalance.currentLiquidationThreshold,
-        ltv: aTokenBalance.ltv,
+        current_liquidation_threshold: Number(
+          aTokenBalance.currentLiquidationThreshold
+        ),
+        ltv: Number(aTokenBalance.ltv),
         health_factor: Number(aTokenBalance.healthFactor * Math.pow(10, -18)),
         // (Number(
         //   BigInt("0x" + aTokenBalance.healthFactor) /
@@ -67,6 +69,7 @@ const getData = async (addr, ca, provider) => {
         //   2 ** 64) *
         // 100,
         borrow_count: borrow_count,
+        repay_count: repay_count,
         scaled_AToken_balance: reservesData.scaledATokenBalance,
         scaled_variable_debt: reservesData.scaledVariableDebt,
       },
@@ -82,7 +85,7 @@ const getData = async (addr, ca, provider) => {
       total_internal_value: "internal Tx ETH 총합",
       internal_tx_count: "Internal Tx 횟수",
       reserves_balance_address:
-        "Aave 프로토콜 내에서 유저가 가지고있는 토큰 종류 및 수량",
+        "Aave 프로토콜 내에서 유저가 가지고있는 토큰 종류 및 수량(USDT,USDC를 제외하고 모두 wei단위(소수점 18자리), USD 단위는 달러(소수점 6자리) )",
       onchain_activity_time: "해당 유저의 On-Chain 활동 기간",
       defi_activity_time:
         "해당 유저가 Defi 활동기간(최초 활동 트랜잭션에서 현재 시간까지의 시간)",
@@ -96,6 +99,7 @@ const getData = async (addr, ca, provider) => {
       ltv: " 대출 상환액 대비 담보 가치 비율",
       health_factor: "대출 상환 능력(1미만은 청산위험)",
       borrow_count: "해당 유저의 대출 횟수",
+      repay_count: "해당 유저의 대출상환 횟수",
       scaled_AToken_balance: "해당 유저의 Aave 자산 잔고 총액(ETH)",
       scaled_variable_debt: "해당 유저의 가변 이자율 대출 잔고 총액(USDT)",
     });
@@ -113,5 +117,5 @@ const main = async () => {
 
   getData(addr, ca, provider);
 };
-
+main();
 module.exports = { getData };

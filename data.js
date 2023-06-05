@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { getData } = require(".");
-const jsonData = require("./data/data2.json");
+const jsonData = require("./data/result_data.json");
 
 const STORE_URL = __dirname + "/data";
 
@@ -37,7 +37,7 @@ const sleep = (ms) => {
   while (Date.now() < wakeUpTime) {}
 };
 
-const addrData = getCsv("address2.csv");
+const addrData = getCsv("address.csv");
 const ca = "0x91c0eA31b49B69Ea18607702c5d9aC360bf3dE7d";
 const provider = "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e";
 
@@ -49,7 +49,7 @@ const main = async () => {
   //   })
   // );
   try {
-    for (let count = 0; count < 300; count++) {
+    for (let count = 0; count < 2100; count++) {
       console.log("----------------------------------------------");
       console.log(`Start address[${count}]: (${addrData[count]})`);
       console.log("----------------------------------------------");
@@ -57,12 +57,12 @@ const main = async () => {
       console.log("data:", data);
       jsonData.push(data);
       console.log("json:", jsonData);
-      const url = getStoreUrl(`data2.json`);
+      const url = getStoreUrl(`result_data.json`);
       fs.writeFileSync(url, JSON.stringify(jsonData, null, 2));
       console.log("----------------------------------------------");
       console.log(`End address[${count}]: (${addrData[count]})`);
       console.log("----------------------------------------------");
-      sleep(1000);
+      sleep(500);
     }
   } catch (error) {
     console.log(error);

@@ -36,7 +36,7 @@
       "available_borrows_base": 298326.06041,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 1.997003539972243,
       "scaled_variable_debt": 0
@@ -79,7 +79,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -165,7 +165,7 @@
       "available_borrows_base": 25.426244,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0.39515170430233937,
       "scaled_variable_debt": 0
@@ -208,7 +208,7 @@
       "available_borrows_base": 29832.445607999998,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0.19969924340053702,
       "scaled_variable_debt": 0
@@ -294,7 +294,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -362,7 +362,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -405,7 +405,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -448,7 +448,7 @@
       "available_borrows_base": 7687109.249129999,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 119466.0622315561,
       "scaled_variable_debt": 0
@@ -577,7 +577,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -731,7 +731,7 @@
       "available_borrows_base": 877.02158,
       "current_liquidation_threshold": "6100",
       "ltv": "5500",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 18.219167523849823,
       "scaled_variable_debt": 0
@@ -756,7 +756,7 @@
       "available_borrows_base": 1715275.373006,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 11.482403698511973,
       "scaled_variable_debt": 0
@@ -799,7 +799,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -824,7 +824,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -867,7 +867,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -910,7 +910,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 10,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -953,7 +953,7 @@
       "available_borrows_base": 181.23699,
       "current_liquidation_threshold": "8133",
       "ltv": "7660",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.4999233385681014,
       "scaled_variable_debt": 0
@@ -996,7 +996,7 @@
       "available_borrows_base": 8845603.582709,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 59.214261536104075,
       "scaled_variable_debt": 0
@@ -1039,7 +1039,7 @@
       "available_borrows_base": 0.065634,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 8.81e-16,
       "scaled_variable_debt": 0
@@ -1082,7 +1082,7 @@
       "available_borrows_base": 11807037.919293,
       "current_liquidation_threshold": "7628",
       "ltv": "7115",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 46951.49544199067,
       "scaled_variable_debt": 0
@@ -1125,7 +1125,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1193,7 +1193,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1218,7 +1218,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1304,7 +1304,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1390,7 +1390,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1433,7 +1433,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1519,7 +1519,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1562,7 +1562,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1605,7 +1605,7 @@
       "available_borrows_base": 93610880.078805,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.000001257109933482,
       "scaled_variable_debt": 0
@@ -1648,7 +1648,7 @@
       "available_borrows_base": 553.597715,
       "current_liquidation_threshold": "7683",
       "ltv": "7100",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.4628815268157718,
       "scaled_variable_debt": 0
@@ -1691,7 +1691,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1777,7 +1777,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1906,7 +1906,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1949,7 +1949,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -1992,7 +1992,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2035,7 +2035,7 @@
       "available_borrows_base": 1812832.963891,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 28173.808612610566,
       "scaled_variable_debt": 0
@@ -2078,7 +2078,7 @@
       "available_borrows_base": 16057.040664,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 249.54750866096614,
       "scaled_variable_debt": 0
@@ -2207,7 +2207,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2275,7 +2275,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2490,7 +2490,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2533,7 +2533,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2601,7 +2601,7 @@
       "available_borrows_base": 86422.385098,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.5790758812411069,
       "scaled_variable_debt": 0
@@ -2624,7 +2624,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2667,7 +2667,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2692,7 +2692,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2735,7 +2735,7 @@
       "available_borrows_base": 0.46420799999999995,
       "current_liquidation_threshold": "7400",
       "ltv": "6700",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.0000034850699549000004,
       "scaled_variable_debt": 0
@@ -2821,7 +2821,7 @@
       "available_borrows_base": 433.356,
       "current_liquidation_threshold": "7300",
       "ltv": "6600",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.1,
       "scaled_variable_debt": 0
@@ -2846,7 +2846,7 @@
       "available_borrows_base": 22299954.460674997,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 2.9946774702000004e-7,
       "scaled_variable_debt": 0
@@ -2889,7 +2889,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -2975,7 +2975,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3233,7 +3233,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3276,7 +3276,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3362,7 +3362,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3491,7 +3491,7 @@
       "available_borrows_base": 75.91281599999999,
       "current_liquidation_threshold": "7662",
       "ltv": "7054",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.11606224464014295,
       "scaled_variable_debt": 0
@@ -3534,7 +3534,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3620,7 +3620,7 @@
       "available_borrows_base": 81764.91372699999,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.098026256e-9,
       "scaled_variable_debt": 0
@@ -3663,7 +3663,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3817,7 +3817,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3860,7 +3860,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3903,7 +3903,7 @@
       "available_borrows_base": 743.3083819999999,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.98193e-12,
       "scaled_variable_debt": 0
@@ -3946,7 +3946,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -3989,7 +3989,7 @@
       "available_borrows_base": 1158.4457949999999,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.5556833e-11,
       "scaled_variable_debt": 0
@@ -4032,7 +4032,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -4075,7 +4075,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.985660000000002e-13,
       "scaled_variable_debt": 0
@@ -4118,7 +4118,7 @@
       "available_borrows_base": 3716.520303,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 4.9909351000000005e-11,
       "scaled_variable_debt": 0
@@ -4143,7 +4143,7 @@
       "available_borrows_base": 1726476.577547,
       "current_liquidation_threshold": "7668",
       "ltv": "6715",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 17679.623809165558,
       "scaled_variable_debt": 0
@@ -4261,7 +4261,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -4347,7 +4347,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -4390,7 +4390,7 @@
       "available_borrows_base": 24.528813,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 3.29399e-13,
       "scaled_variable_debt": 0
@@ -4476,7 +4476,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.48551735132e-7,
       "scaled_variable_debt": 0
@@ -4519,7 +4519,7 @@
       "available_borrows_base": 343.04186599999997,
       "current_liquidation_threshold": "7783",
       "ltv": "7371",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.0018981030619078271,
       "scaled_variable_debt": 0
@@ -4562,7 +4562,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 2.49637025e-10,
       "scaled_variable_debt": 0
@@ -4605,7 +4605,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -4648,7 +4648,7 @@
       "available_borrows_base": 194.867639,
       "current_liquidation_threshold": "7671",
       "ltv": "6918",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.6255438735015345,
       "scaled_variable_debt": 0
@@ -4691,7 +4691,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -4734,7 +4734,7 @@
       "available_borrows_base": 180.76657699999998,
       "current_liquidation_threshold": "7626",
       "ltv": "6972",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.6137441657474317,
       "scaled_variable_debt": 0
@@ -4931,7 +4931,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5085,7 +5085,7 @@
       "available_borrows_base": 14.847828999999999,
       "current_liquidation_threshold": "8249",
       "ltv": "7999",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0.00009986289179109601,
       "scaled_variable_debt": 0
@@ -5128,7 +5128,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5171,7 +5171,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5239,7 +5239,7 @@
       "available_borrows_base": 29.071258999999998,
       "current_liquidation_threshold": "8091",
       "ltv": "7392",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.000199819636015938,
       "scaled_variable_debt": 0
@@ -5307,7 +5307,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5479,7 +5479,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 95742.883539854,
       "scaled_variable_debt": 0
@@ -5633,7 +5633,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5676,7 +5676,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5762,7 +5762,7 @@
       "available_borrows_base": 743.260803,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.981261e-12,
       "scaled_variable_debt": 0
@@ -5805,7 +5805,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5848,7 +5848,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5891,7 +5891,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5934,7 +5934,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -5977,7 +5977,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6131,7 +6131,7 @@
       "available_borrows_base": 1054.822711,
       "current_liquidation_threshold": "7529",
       "ltv": "6710",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 6.110463838934794,
       "scaled_variable_debt": 0
@@ -6303,7 +6303,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6346,7 +6346,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6389,7 +6389,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6432,7 +6432,7 @@
       "available_borrows_base": 579348.852997,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9004.329157690918,
       "scaled_variable_debt": 0
@@ -6475,7 +6475,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6611,7 +6611,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6654,7 +6654,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6740,7 +6740,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6765,7 +6765,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6851,7 +6851,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -6894,7 +6894,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7005,7 +7005,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7048,7 +7048,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7091,7 +7091,7 @@
       "available_borrows_base": 13410.800474,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 208.4393056528219,
       "scaled_variable_debt": 0
@@ -7134,7 +7134,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7306,7 +7306,7 @@
       "available_borrows_base": 1340.60689,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.00898440419330805,
       "scaled_variable_debt": 0
@@ -7349,7 +7349,7 @@
       "available_borrows_base": 510905.807299,
       "current_liquidation_threshold": "9300",
       "ltv": "9000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 3.0435196962436235,
       "scaled_variable_debt": 0
@@ -7521,7 +7521,7 @@
       "available_borrows_base": 139506.893272,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.9349391283574838,
       "scaled_variable_debt": 0
@@ -7546,7 +7546,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7614,7 +7614,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7657,7 +7657,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.983910000000001e-13,
       "scaled_variable_debt": 0
@@ -7700,7 +7700,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7743,7 +7743,7 @@
       "available_borrows_base": 0.066744,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 8.96e-16,
       "scaled_variable_debt": 0
@@ -7786,7 +7786,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -7872,7 +7872,7 @@
       "available_borrows_base": 97.147052,
       "current_liquidation_threshold": "7475",
       "ltv": "6953",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.00424814861024648,
       "scaled_variable_debt": 0
@@ -7965,7 +7965,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8008,7 +8008,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 10,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8094,7 +8094,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8180,7 +8180,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8223,7 +8223,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8395,7 +8395,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8438,7 +8438,7 @@
       "available_borrows_base": 7431.9522019999995,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.9803334e-11,
       "scaled_variable_debt": 0
@@ -8481,7 +8481,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8567,7 +8567,7 @@
       "available_borrows_base": 157.121694,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.001051510071947572,
       "scaled_variable_debt": 0
@@ -8610,7 +8610,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8653,7 +8653,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 13,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8696,7 +8696,7 @@
       "available_borrows_base": 1772.832377,
       "current_liquidation_threshold": "7473",
       "ltv": "6811",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 5.490048430948465,
       "scaled_variable_debt": 0
@@ -8739,7 +8739,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 2.5000000000000003e-17,
       "scaled_variable_debt": 0
@@ -8764,7 +8764,7 @@
       "available_borrows_base": 14915918.161875999,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 99.82219719775541,
       "scaled_variable_debt": 0
@@ -8787,7 +8787,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2
     }
   },
@@ -8828,7 +8828,7 @@
       "available_borrows_base": 1077.010566,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0.007207704752968244,
       "scaled_variable_debt": 0
@@ -8914,7 +8914,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -8957,7 +8957,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9000,7 +9000,7 @@
       "available_borrows_base": 22.344988,
       "current_liquidation_threshold": "8022",
       "ltv": "7789",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.00009982184606608201,
       "scaled_variable_debt": 0
@@ -9043,7 +9043,7 @@
       "available_borrows_base": 46.921958,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 6.301120000000001e-13,
       "scaled_variable_debt": 0
@@ -9086,7 +9086,7 @@
       "available_borrows_base": 706.253237,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 10.977067589228303,
       "scaled_variable_debt": 0
@@ -9172,7 +9172,7 @@
       "available_borrows_base": 1118.246083,
       "current_liquidation_threshold": "8203",
       "ltv": "7957",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.006986420646993016,
       "scaled_variable_debt": 0
@@ -9215,7 +9215,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9240,7 +9240,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9394,7 +9394,7 @@
       "available_borrows_base": 27378777.220078,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 3.67667708581e-7,
       "scaled_variable_debt": 0
@@ -9419,7 +9419,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9505,7 +9505,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9573,7 +9573,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9641,7 +9641,7 @@
       "available_borrows_base": 148277.03799799999,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0.9950930011361301,
       "scaled_variable_debt": 0
@@ -9666,7 +9666,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9709,7 +9709,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9752,7 +9752,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9793,7 +9793,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9859,7 +9859,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -9900,7 +9900,7 @@
       "available_borrows_base": 743.1501049999999,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.979697e-12,
       "scaled_variable_debt": 0
@@ -10029,7 +10029,7 @@
       "available_borrows_base": 30939.006077,
       "current_liquidation_threshold": "6500",
       "ltv": "5000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 94.92616143371387,
       "scaled_variable_debt": 0
@@ -10072,7 +10072,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10244,7 +10244,7 @@
       "available_borrows_base": 230.960387,
       "current_liquidation_threshold": "7569",
       "ltv": "6901",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.923495893549662,
       "scaled_variable_debt": 0
@@ -10269,7 +10269,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10312,7 +10312,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10398,7 +10398,7 @@
       "available_borrows_base": 743.142779,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.979591e-12,
       "scaled_variable_debt": 0
@@ -10441,7 +10441,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10491,7 +10491,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10577,7 +10577,7 @@
       "available_borrows_base": 6379791.75386,
       "current_liquidation_threshold": "7700",
       "ltv": "6400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 99152.49289972067,
       "scaled_variable_debt": 0
@@ -10620,7 +10620,7 @@
       "available_borrows_base": 1376871.045731,
       "current_liquidation_threshold": "7400",
       "ltv": "6700",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 10.361011833075759,
       "scaled_variable_debt": 0
@@ -10706,7 +10706,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.98251e-13,
       "scaled_variable_debt": 0
@@ -10749,7 +10749,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10792,7 +10792,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10817,7 +10817,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10860,7 +10860,7 @@
       "available_borrows_base": 7431305.555013999,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.9794204978e-8,
       "scaled_variable_debt": 0
@@ -10903,7 +10903,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 3,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10928,7 +10928,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -10971,7 +10971,7 @@
       "available_borrows_base": 148.620238,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.995805e-12,
       "scaled_variable_debt": 0
@@ -11014,7 +11014,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 4,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11141,7 +11141,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11184,7 +11184,7 @@
       "available_borrows_base": 148.62445599999998,
       "current_liquidation_threshold": "7600",
       "ltv": "7400",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.995861e-12,
       "scaled_variable_debt": 0
@@ -11250,7 +11250,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11336,7 +11336,7 @@
       "available_borrows_base": 445.85547599999995,
       "current_liquidation_threshold": "8250",
       "ltv": "8000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0.0029943819398882414,
       "scaled_variable_debt": 0
@@ -11508,7 +11508,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 5,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11551,7 +11551,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11594,7 +11594,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 1,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11637,7 +11637,7 @@
       "available_borrows_base": 582.359872,
       "current_liquidation_threshold": "7796",
       "ltv": "7285",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 2.615947405171853,
       "scaled_variable_debt": 0
@@ -11723,7 +11723,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11766,7 +11766,7 @@
       "available_borrows_base": 35.702466,
       "current_liquidation_threshold": "7500",
       "ltv": "7000",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.872e-15,
       "scaled_variable_debt": 0
@@ -11809,7 +11809,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11834,7 +11834,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 1.1017832526300001e-7,
       "scaled_variable_debt": 0
@@ -11877,7 +11877,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -11920,7 +11920,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 9.952064525000002e-9,
       "scaled_variable_debt": 0
@@ -11963,7 +11963,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 2,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -12006,7 +12006,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0
@@ -12049,7 +12049,7 @@
       "available_borrows_base": 0,
       "current_liquidation_threshold": "0",
       "ltv": "0",
-      "health_factor": 1.157920892373162e+59,
+      "health_factor": 1.157920892373162e59,
       "borrow_count": 0,
       "scaled_AToken_balance": 0,
       "scaled_variable_debt": 0

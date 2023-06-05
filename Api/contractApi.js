@@ -128,6 +128,25 @@ const Api = {
       return false;
     }
   },
+  getRepayTransactions: async (addr) => {
+    try {
+      const filter = {
+        fromBlock: 0,
+        toBlock: "latest",
+        address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+        topics: [
+          "0xa534c8dbe71f871f9f3530e97a74601fea17b426cae02e1c5aee42c96c784051",
+          null,
+          `0x000000000000000000000000${sliceAddr(addr)}`,
+        ],
+      };
+      const logs = await web3.eth.getPastLogs(filter);
+      return logs.length;
+    } catch (e) {
+      console.log(e);
+      return false;
+    }
+  },
 };
 
 module.exports = Api;

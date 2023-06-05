@@ -140,7 +140,7 @@ const Api = {
           [tokenInfo.name ===
           "0x4d4b520000000000000000000000000000000000000000000000000000000000"
             ? web3.utils.hexToUtf8(tokenInfo.name).toString()
-            : tokenInfo.name]: tokenInfo.balance,
+            : tokenInfo.name]: Number(tokenInfo.balance),
         };
       }
       return tokenInfoList;
