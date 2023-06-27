@@ -4,7 +4,7 @@ const rpcEndpoint = `https://mainnet.infura.io/v3/${process.env.INFURA_APIKEY}`;
 const web3 = new Web3(rpcEndpoint);
 
 const contract = require("./contractApi");
-const etherscanApi = require("./etherscanApi");
+const etherscanApi = require("./EtherscanApi");
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -254,6 +254,108 @@ const Api = {
     } catch (e) {
       console.log(e);
       return falses;
+    }
+  },
+  getERC20TokenList: async (addr) => {
+    try {
+      const result = await etherscanApi.getERC20TokenHolding(addr);
+      const tokensInfo = await Promise.all(
+        result.map(async (i) => {
+          const {
+            TokenAddress,
+            TokenName,
+            TokenSymbol,
+            TokenQuantity,
+            TokenDivisor,
+          } = i;
+          const erc20Event = await etherscanApi.getERC20TokenTransferEvent(
+            addr,
+            TokenAddress
+          );
+          let receiveValue = 0;
+          let receiveCount = 0;
+          let withdrawValue = 0;
+          let withdrawCount = 0;
+          [...new Array(erc20Event.length)].map((_, idx) => {
+            const { to, value, from } = erc20Event[idx];
+            if (to === addr) {
+              receiveValue += Number(value);
+              receiveCount++;
+            } else if (from === addr) {
+              withdrawValue += Number(value);
+              withdrawCount++;
+            }
+          });
+          const currentTimestamp = Math.floor(Date.now() / 1000);
+          const activityTime =
+            erc20Event.length > 0
+              ? (currentTimestamp - parseInt(erc20Event[0].timeStamp)) /
+                (3600 * 24)
+              : Number(0);
+          const tokenInfo = {
+            tokenAddress: TokenAddress,
+            tokenName: TokenName,
+            tokenSymbol: TokenSymbol,
+            tokenQuantity: TokenQuantity * Math.pow(10, -TokenDivisor),
+            tokenDivisor: TokenDivisor,
+            withdrawValue: withdrawValue,
+            withdrawCount: withdrawCount,
+            receiveValue: receiveValue,
+            receiveCount: receiveCount,
+            activityTime: activityTime ? activityTime : 0,
+          };
+          return tokenInfo;
+        })
+      );
+      return tokensInfo;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  },
+  getERC721TokenList: async (addr) => {
+    try {
+      const result = await etherscanApi.getERC721TokenHolding(addr);
+      const nftInfoList = await Promise.all(
+        result.map(async (i) => {
+          const { TokenAddress, TokenName, TokenSymbol, TokenQuantity } = i;
+          const erc721Event = await etherscanApi.getERC721TokenTransferEvent(
+            addr,
+            TokenAddress
+          );
+          let receiveCount = 0;
+          let withdrawCount = 0;
+          [...new Array(erc721Event.length)].map((_, idx) => {
+            const { to, from } = erc721Event[idx];
+            if (to === addr) {
+              receiveCount++;
+            } else if (from === addr) {
+              withdrawCount++;
+            }
+          });
+          const currentTimestamp = Math.floor(Date.now() / 1000);
+          const activityTime =
+            erc721Event.length > 0
+              ? (currentTimestamp - parseInt(erc721Event[0].timeStamp)) /
+                (3600 * 24)
+              : Number(0);
+          const nft = {
+            tokenAddress: TokenAddress,
+            tokenName: TokenName,
+            tokenSymbol: TokenSymbol,
+            tokenQuantity: TokenQuantity,
+            receiveCount: receiveCount,
+            withdrawCount: withdrawCount,
+            activityTime: activityTime ? activityTime : 0,
+          };
+          console.log(nft);
+          return nft;
+        })
+      );
+      return nftInfoList;
+    } catch (error) {
+      console.log(error);
+      return false;
     }
   },
 };

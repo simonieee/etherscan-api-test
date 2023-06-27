@@ -4,7 +4,7 @@
 const _ = require("lodash");
 require("dotenv").config();
 const contract = require("./Api/contractApi");
-const etherscanApi = require("./Api/etherscanApi");
+const etherscanApi = require("./Api/EtherscanApi");
 const customApi = require("./Api/customApi");
 
 /**

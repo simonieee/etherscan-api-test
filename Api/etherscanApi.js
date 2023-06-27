@@ -79,7 +79,8 @@ const Api = {
         action: "tokentx",
         contractaddress: ca,
         address: address,
-        tag: "latest",
+        startblock: "17000000",
+        endblock: "latest",
         apikey: API_KEY,
       };
       const res = await axios({
@@ -89,6 +90,7 @@ const Api = {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;",
         },
+        timeout: 10000,
         responseType: "json",
       });
       return res.data.result;
@@ -110,7 +112,8 @@ const Api = {
         action: "tokennfttx",
         contractaddress: ca,
         address: address,
-        tag: "latest",
+        startblock: "17000000",
+        endblock: "latest",
         apikey: API_KEY,
       };
       const res = await axios({
@@ -120,7 +123,7 @@ const Api = {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;",
         },
-        timeout: 5000,
+        timeout: 10000,
         responseType: "json",
       });
       return res.data.result;
@@ -282,6 +285,56 @@ const Api = {
       return defiTx;
     } catch (error) {
       console.log(error);
+    }
+  },
+  getERC20TokenHolding: async (address) => {
+    try {
+      const params = {
+        module: "account",
+        action: "addresstokenbalance",
+        address: address,
+        page: 1,
+        offset: 100,
+        apikey: API_KEY,
+      };
+      const res = await axios({
+        method: "get",
+        url: REQ_URL,
+        params: params,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;",
+        },
+        responseType: "json",
+      });
+      return res.data.result;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  },
+  getERC721TokenHolding: async (address) => {
+    try {
+      const params = {
+        module: "account",
+        action: "addresstokennftbalance",
+        address: address,
+        page: 1,
+        offset: 100,
+        apikey: API_KEY,
+      };
+      const res = await axios({
+        method: "get",
+        url: REQ_URL,
+        params: params,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;",
+        },
+        responseType: "json",
+      });
+      return res.data.result;
+    } catch (error) {
+      console.log(error);
+      return false;
     }
   },
 };
