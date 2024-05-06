@@ -73,7 +73,7 @@ async function getUserReservesData(abi, ca, provider, addr) {
   return userReservesData;
 }
 
-printAccountBalances();
+// printAccountBalances();
 // getTokenList();
 // getATokenBalance(aTokenAbi, accountAddress, aTokenAddress);
 module.exports = {

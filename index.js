@@ -56,7 +56,7 @@ const getData = async (addr, ca, provider) => {
           aTokenBalance.totalCollateralBase * Math.pow(10, -8),
         total_debt_base: aTokenBalance.totalDebtBase * Math.pow(10, -8),
         available_borrows_base:
-          aTokenBalance.availableBorrowsBase * Math.pow(10, -6),
+          aTokenBalance.availableBorrowsBase * Math.pow(10, -8),
         current_liquidation_threshold: Number(
           aTokenBalance.currentLiquidationThreshold
         ),
@@ -111,11 +111,15 @@ const getData = async (addr, ca, provider) => {
 };
 
 const main = async () => {
-  const addr = "0xca0AAf0E071f31D86812d83716e10eA5D5cfD425";
+  const addr = "0xb92eEcE3F39EA2a82aC4741ff28548503ebf835C";
   const ca = "0x91c0eA31b49B69Ea18607702c5d9aC360bf3dE7d";
   const provider = "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e";
 
   getData(addr, ca, provider);
+  // const aTokenBalance = await contract.getBorrowBalance(addr);
+  // console.log(aTokenBalance);
+  // const loanData = await contract.getLoanTransactions(addr);
+  // console.log(loanData);
 };
 main();
 module.exports = { getData };
